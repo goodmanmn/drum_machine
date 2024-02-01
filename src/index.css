@@ -1,13 +1,72 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.drum-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 5px;
+  font-family: inherit;
+  font-size: large;
+  border: 0;
+  border-radius: 5px;
+}
+
+.drum-pad-pad {
+  display: grid;
+  grid-template-areas:
+    "top1 top2 top3"
+    "middle1 middle2 middle3"
+    "bottom1 bottom2 bottom3";
+}
+
+#display {
+  width: 100px;
+  margin-right: 10px;
+  background-color: orange;
+  text-align: center;
+  padding: 30px 0;
+  border-radius: 5px;
+}
+
+#drum-machine {
+  background-color: grey;
+  display: flex;
+  width: 450px;
+  height: 300px;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.drum-pad:nth-child(1) {
+  grid-area: "top1";
+}
+.drum-pad:nth-child(2) {
+  grid-area: "top2";
+}
+.drum-pad:nth-child(3) {
+  grid-area: "top3";
+}
+.drum-pad:nth-child(4) {
+  grid-area: "middle1";
+}
+.drum-pad:nth-child(5) {
+  grid-area: "middle2";
+}
+.drum-pad:nth-child(6) {
+  grid-area: "middle3";
+}
+.drum-pad:nth-child(7) {
+  grid-area: "bottom1";
+}
+.drum-pad:nth-child(8) {
+  grid-area: "bottom2";
+}
+.drum-pad:nth-child(9) {
+  grid-area: "bottom3";
 }
